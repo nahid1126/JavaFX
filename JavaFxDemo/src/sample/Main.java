@@ -25,6 +25,8 @@ public class Main extends Application {
         textField = new TextField();
         label = new Label();
         textField.setPromptText("Enter Your Name");
+        
+        //event handler
         button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -32,8 +34,8 @@ public class Main extends Application {
                 label.setText("Hello! " + name);
             }
         });
-        FlowPane flowPaneRoot = new FlowPane(20, 10);
-        flowPaneRoot.setAlignment(Pos.CENTER);
+        FlowPane flowPaneRoot = new FlowPane(Orientation.VERTICAL,20, 10);
+        flowPaneRoot.setAlignment(Pos.TOP_CENTER);
         // StackPane root=new StackPane();
         flowPaneRoot.getChildren().add(mylabel);
         flowPaneRoot.getChildren().add(textField);
